@@ -7,13 +7,14 @@ const galleryContainer = document.querySelector(".gallery");
 
 function createGalleryItems(images) {
   return images
-    .map(({ preview, original }) => {
+    .map(({ preview, original, description }) => {
       return `
             <div class="gallery__item">
             <a class="gallery__link" href="${original}">
             <img
             class="gallery__image"
             src="${preview}"
+            alt="${description}"
             />
             </a>
             </div>`;
@@ -36,4 +37,5 @@ function onGalleryClick(e) {
 
 new SimpleLightbox(".gallery a", {
   captionDelay: 250,
+  captionsData: "alt",
 });
