@@ -48,4 +48,3 @@ function onGalleryClick(e) {
     }
   });
 }
-//cc
